@@ -1,4 +1,4 @@
-package com.example.MedicalStoreAPP.enity;
+package com.example.MedicalStoreAPP.entity;
 
 import jakarta.persistence.*;
 

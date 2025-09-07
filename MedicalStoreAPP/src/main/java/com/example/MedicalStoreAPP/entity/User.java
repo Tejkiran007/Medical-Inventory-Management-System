@@ -1,4 +1,4 @@
-package com.example.MedicalStoreAPP.enity;
+package com.example.MedicalStoreAPP.entity;
 
 import jakarta.persistence.*;
 
@@ -9,8 +9,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
-    private String Email;
-    private String Password;
+    private String email;
+    private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -19,11 +19,11 @@ public class User {
     }
     public User(){}
 
-    public User(String username,String Email,String Password,Role role)
+    public User(String username,String email,String password,Role role)
     {
         this.username = username;
-        this.Email = Email;
-        this.Password = Password;
+        this.email = email;
+        this.password = password;
         this.role = role;
     }
     public long getId()
@@ -43,17 +43,17 @@ public class User {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
     public void setEmail(String email) {
-        this.Email = Email;
+        this.email = email;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
     public void setPassword(String password) {
-        this.Password = Password;
+        this.password = password;
     }
 
     public Role getRole() { return role; }

@@ -1,7 +1,7 @@
 package com.example.MedicalStoreAPP.repository;
 
 
-import com.example.MedicalStoreAPP.enity.Medicine;
+import com.example.MedicalStoreAPP.entity.Medicine;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

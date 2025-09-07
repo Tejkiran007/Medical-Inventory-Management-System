@@ -1,13 +1,12 @@
 package com.example.MedicalStoreAPP.service;
 
 
-import com.example.MedicalStoreAPP.enity.Medicine;
+import com.example.MedicalStoreAPP.entity.Medicine;
 import com.example.MedicalStoreAPP.repository.MedicineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -50,5 +49,13 @@ public class MedicineService {
         LocalDate today=LocalDate.now();
         LocalDate thirtyDaysLater = today.plusDays(30);
         return medicineRepository.findExpiringMedicines(today, thirtyDaysLater);
+    }
+
+    public List<Medicine> searchMedicines(String name) {
+        return medicineRepository.findByNameContainingIgnoreCase(name);
+    }
+
+    public List<Medicine> getExpiredMedicines() {
+        return medicineRepository.findByExpiryDateBefore(java.time.LocalDate.now());
     }
 }

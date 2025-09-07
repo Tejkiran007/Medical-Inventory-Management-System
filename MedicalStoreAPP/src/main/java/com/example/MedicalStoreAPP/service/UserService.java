@@ -1,7 +1,7 @@
 package com.example.MedicalStoreAPP.service;
 
 
-import com.example.MedicalStoreAPP.enity.User;
+import com.example.MedicalStoreAPP.entity.User;
 import com.example.MedicalStoreAPP.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
