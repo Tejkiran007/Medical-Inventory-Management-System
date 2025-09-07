@@ -18,7 +18,7 @@ public class Medicine {
     private LocalDate expiryDate;
     private LocalDate createdDate;
 
-    
+
     public Medicine() {
         this.createdDate = LocalDate.now();
     }
